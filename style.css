@@ -32,6 +32,8 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+    z-index: 100;
 }
 
 #menu {
@@ -79,7 +81,19 @@ nav {
 #menu h4:hover a {
     color: white;
 }
-
+nav h3{
+    display: none;
+    cursor: pointer;
+}
+#full-scr{
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.548);
+    position: fixed;
+    z-index: 99;
+    top: -102%;
+    transition: all ease 0.4s;
+}
 #center {
     width: 100%;
     height: 65vh;
@@ -565,5 +579,42 @@ nav {
     }
     to{
         transform: rotate(45deg);
+    }
+}
+@media (max-width:600px) {
+    #page1{
+        min-height: 100vh;
+        width: 100vw;
+        padding: 0 0;
+    }
+    nav{
+        padding: 8vw 5vw;
+        background-color: #EFEAE3;
+    }
+    nav img{
+        height: 9vh;
+        transition: all ease 0.2s;
+    }
+    #fullscr-div1{
+        background-color: #EFEAE3;
+        height: 50%;
+        width: 100%;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+    #fullscr-div1 h1{
+        color: black;
+        
+    }
+    #menu{
+        display: none;
+        cursor: pointer;
+    }
+    nav h3{
+        display: block;
+        padding: 1vw 3vw;
+        border: 1px solid #d3cdc1df;
+        border-radius: 50px;
+        font-size: 3.5vw;
     }
 }
